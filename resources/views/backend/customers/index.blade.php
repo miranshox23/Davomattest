@@ -26,16 +26,15 @@
             <table id="sqltable" class="table table-bordered table-striped table-hover table-sm dataTable">
                 <thead class="table-success">
                     <tr>
-                        <th scope="col" width="4%">Bo'lim kodi</th>
-                        <th scope="col">Boshqarmalar nomi</th>
-                        <th scope="col">Xodimlar soni</th>
+                        <th scope="col">Бошқармалар номи</th>
+                        <th scope="col">ходимлар сони</th>
                         <th scope="col">17:30 дан кейинги ходимлар сони</th>
                         <th scope="col">Рўзадорлар</th>
-                        <th scope="col">Чой РУЧНОЙ</th>
-                        <th scope="col">ходимлар сони</th>
-                        <th scope="col">05:30 дан кейинги ходимлар сони</th>
-                        
-                        <th scope="col" class="text-danger">Newsletter ?</th>
+                        <th scope="col">Чой</th>
+                        <th scope="col">ходимлар сони 2-смена</th>
+                        <th scope="col">05:30 дан кейинги ходимлар сони 2-смена</th>
+                        <th scope="col">Рўзадорлар 2-смена</th>
+                        <th scope="col">Чой 2-смена</th>
                     </tr>
                 </thead>
             </table>

@@ -1,15 +1,11 @@
 <div class="card mb-3">
     <div class="card-header">
         <div class="row">
-            <div class="col">Welcome ...</div>
+            <div class="col">Davomat</div>
             <div class="col fs-5 text-end">
                 <i class="bi bi-house-fill"></i>
             </div>
         </div>
-    </div>
-
-    <div class="card-body p-0">
-        <img src="{{ asset('img/administration.jpg') }}" alt="administration" class="d-block w-100" />
     </div>
 
     <div class="card-footer">

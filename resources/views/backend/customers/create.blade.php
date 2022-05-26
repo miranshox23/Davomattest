@@ -13,7 +13,7 @@
                 <div class="card mb-3">
                     <div class="card-header">
                         <div class="row">
-                            <div class="col">Customer - Add</div>
+                            <div class="col">Davomat</div>
 
                             <div class="col fs-5 text-end">
                                 <img src="{{ asset('img/icons/person.png') }}" />
@@ -23,7 +23,7 @@
 
                     <div class="card-body">
                         <div class="row mb-2">
-                            <label for="customer_last_name" class="col-md-3 col-form-label">Last name :</label>
+                            <label for="customer_last_name" class="col-md-3 col-form-label">Бошқармалар номи</label>
 
                             <div class="col-md-8">
                                 <input id="customer_last_name" name="customer_last_name" type="text"
@@ -37,7 +37,7 @@
                         </div>
 
                         <div class="row mb-2">
-                            <label for="customer_first_name" class="col-md-3 col-form-label">First name :</label>
+                            <label for="customer_first_name" class="col-md-3 col-form-label">ходимлар сони</label>
 
                             <div class="col-md-8">
                                 <input id="customer_first_name" name="customer_first_name" type="text"
@@ -52,7 +52,7 @@
                         <hr class="narrow" />
 
                         <div class="row mb-2">
-                            <label for="company_name" class="col-md-3 col-form-label">Company :</label>
+                            <label for="company_name" class="col-md-3 col-form-label">17:30 дан кейинги ходимлар сони</label>
 
                             <div class="col-md-8">
                                 <input id="company_name" name="company_name" type="text"
@@ -66,7 +66,7 @@
                         </div>
 
                         <div class="row mb-2">
-                            <label for="company_vat" class="col-md-3 col-form-label">VAT N° :</label>
+                            <label for="company_vat" class="col-md-3 col-form-label">№</label>
 
                             <div class="col-md-8">
                                 <input id="company_vat" name="company_vat" type="text"
@@ -82,7 +82,7 @@
 
                         <div class="row mb-2">
                             <label for="address_street" class="col-md-3 col-form-label">
-                                Street, number :
+                                Рўзадорлар
                             </label>
 
                             <div class="col-md-6">
