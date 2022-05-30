@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('title')
-    &vert; Customer
+    &vert; Davomat
 @endsection
 
 @section('content')

@@ -15,7 +15,7 @@
 
                             <div class="mb-3 row">
                                 <label for="email" class="col-md-4 col-form-label text-end">
-                                    {{ __('E-Mail Address') }} :
+                                    {{ __('E-Mail') }} :
                                 </label>
 
                                 <div class="col-md-6">

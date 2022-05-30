@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('title')
-    &vert; Customer
+    &vert; Davomat
 @endsection
 
 @section('content')
@@ -10,7 +10,7 @@
             <div class="card mb-3">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col">Customer</div>
+                        <div class="col">Davomaat</div>
 
                         <div class="col text-center">
                             <strong>{{ str_pad($customer->id, 5, '0', STR_PAD_LEFT) }}</strong>
@@ -139,7 +139,7 @@
                     <div class="row">
                         <div class="col">
                             <a class="btn btn-secondary text-white btn-sm"
-                                href="{{ route('backend.customers.index') }}"" role=" button" tabindex="-1">
+                                href="{{ route('backend.customers.index') }}" role=" button" tabindex="-1">
                                 <i class="bi bi-arrow-left-short"></i>
                             </a>
                         </div>

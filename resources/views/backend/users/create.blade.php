@@ -13,7 +13,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="row">
-                            <div class="col">User - Add</div>
+                            <div class="col">Foydalanuvchi qo'shish</div>
 
                             <div class="col fs-5 text-end">
                                 <img src="{{ asset('img/icons/person.png') }}" />
@@ -23,7 +23,7 @@
 
                     <div class="card-body">
                         <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label">Name :</label>
+                            <label for="name" class="col-md-4 col-form-label">Ismi</label>
 
                             <div class="col-md-7">
                                 <input id="name" name="name" type="text"
@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label">Password :</label>
+                            <label for="password" class="col-md-4 col-form-label">Parol :</label>
 
                             <div class="col-md-7">
                                 <input id="password" name="password" type="password"
@@ -64,7 +64,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password_confirmation" class="col-md-4 col-form-label">Confirm password :</label>
+                            <label for="password_confirmation" class="col-md-4 col-form-label">Parolni tasdiqlash :</label>
 
                             <div class="col-md-7">
                                 <input id="password_confirmation" name="password_confirmation" type="password"
@@ -78,12 +78,12 @@
                         <hr class="narrow" />
 
                         <div class="row mb-3">
-                            <label for="is_developer" class="col-md-4 col-form-label">Developer ?</label>
+                            <label for="is_developer" class="col-md-4 col-form-label">Ruxsat</label>
 
                             <div class="col-md-2">
                                 <select class="form-select" name="is_developer" id="is_developer">
-                                    <option value="0" @if (old('is_developer') == '0') selected @endif>No</option>
-                                    <option value="1" @if (old('is_developer') == '1') selected @endif>Yes</option>
+                                    <option value="0" @if (old('is_developer') == '0') selected @endif>Ha</option>
+                                    <option value="1" @if (old('is_developer') == '1') selected @endif>Yo'q</option>
                                 </select>
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                             </div>
 
                             <div class="col text-end">
-                                <button type="submit" class="btn btn-primary text-white btn-sm">Send</button>
+                                <button type="submit" class="btn btn-primary text-white btn-sm">Saqlash</button>
                             </div>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
             </form>
         </div>
 
-        <div class="col-md-6 mb-3">
+        <!-- <div class="col-md-6 mb-3">
             <div class="card">
                 <div class="card-header bg-info text-white">
                     <div class="row">
@@ -125,6 +125,6 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 @endsection

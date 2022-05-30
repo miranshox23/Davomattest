@@ -8,7 +8,7 @@
     <div class="card">
         <div class="card-header">
             <div class="row">
-                <div class="col">Users</div>
+                <div class="col">Foydalanuvchilar</div>
 
                 <div class="col fs-5 text-end">
                     <img src="{{ asset('img/icons/persons.png') }}" />
@@ -26,10 +26,10 @@
             <table id="sqltable" class="table table-bordered table-striped table-hover table-sm dataTable">
                 <thead class="table-success">
                     <tr>
-                        <th scope="col" width="4%">ID</th>
-                        <th scope="col">Name</th>
+                        <th scope="col" width="4%">No</th>
+                        <th scope="col">Ism</th>
                         <th scope="col">E-mail</th>
-                        <th scope="col" class="text-danger">Developer ?</th>
+                        <th scope="col" class="text-danger">Ruxsat</th>
                     </tr>
                 </thead>
             </table>

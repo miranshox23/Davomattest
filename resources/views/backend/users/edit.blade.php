@@ -14,7 +14,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="row">
-                            <div class="col">User - Edit</div>
+                            <div class="col">Foydalanuvchini o'zgartirish</div>
 
                             <div class="col fs-5 text-end">
                                 <img src="{{ asset('img/icons/person.png') }}" />
@@ -26,7 +26,7 @@
                         <input id="id" type="hidden" name="id" value="{{ $user->id }}">
 
                         <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label">Name :</label>
+                            <label for="name" class="col-md-4 col-form-label">Ismi</label>
 
                             <div class="col-md-7">
                                 <input id="name" name="name" type="text"
@@ -55,7 +55,7 @@
 
                         @isset($create)
                             <div class="row mb-3">
-                                <label for="password" class="col-md-4 col-form-label">Password :</label>
+                                <label for="password" class="col-md-4 col-form-label">Parol</label>
 
                                 <div class="col-md-7">
                                     <input id="password" name="password" type="password"
@@ -68,7 +68,7 @@
                             </div>
 
                             <div class="row mb-3">
-                                <label for="password_confirmation" class="col-md-4 col-form-label">Confirm password :</label>
+                                <label for="password_confirmation" class="col-md-4 col-form-label">Parolni tasdiqlash</label>
 
                                 <div class="col-md-7">
                                     <input id="password_confirmation" name="password_confirmation" type="password"
@@ -83,7 +83,7 @@
                         <hr class="narrow" />
 
                         <div class="row mb-3">
-                            <label for="is_developer" class="col-md-4 col-form-label">Developer ?</label>
+                            <label for="is_developer" class="col-md-4 col-form-label">Ruxsat</label>
 
                             <div class="col-md-2">
                                 <select class="form-select" name="is_developer" id="is_developer">
@@ -104,7 +104,7 @@
                             </div>
 
                             <div class="col text-end">
-                                <button type="submit" class="btn btn-primary text-white btn-sm">Send</button>
+                                <button type="submit" class="btn btn-primary text-white btn-sm">Jo'natish</button>
                             </div>
                         </div>
                     </div>

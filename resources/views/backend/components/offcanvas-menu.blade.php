@@ -1,16 +1,14 @@
 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
     <!-- application -->
-    <li class="nav-item">
-        <a class="nav-link disabled" aria-current="page" href="/">Application</a>
-    </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('backend.customers.index') }}">Customers</a>
+        <a class="nav-link" href="{{ route('backend.customers.index') }}">Davomat</a>
     </li>
+     <li><a class="nav-link" href="{{ route('backend.users.index') }}">Foydalanuvchilar</a></li>
     <hr class="narrow">
 
     <!-- developer -->
-    @can('developer')
+    <!-- @can('developer')
         <li class="nav-item">
             <a class="nav-link disabled" aria-current="page" href="/">Administration</a>
         </li>
@@ -29,5 +27,5 @@
                 <li><a class="dropdown-item" href="{{ route('backend.developer.session') }}">Session</a></li> --}}
             </ul>
         </li>
-    @endcan
+    @endcan -->
 </ul>
