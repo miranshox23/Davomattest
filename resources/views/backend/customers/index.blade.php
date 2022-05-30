@@ -179,14 +179,7 @@
                     url: "{{ route('backend.customers.index') }}",
                     data: function(d) {}
                 },
-                columns: [{
-                        data: 'id',
-                        name: 'id',
-                        className: 'text-center',
-                        render: function(data, type, row, meta) {
-                            return data.toString().padStart(5, '0');
-                        }
-                    },
+                columns: [
                     {
                         data: 'customer_last_name',
                         name: 'customer_last_name',
@@ -211,6 +204,10 @@
                     {
                         data: 'address_place',
                         name: 'address_place',
+                    },
+                    {
+                        data: 'phone',
+                        name: 'phone',
                     },
                     {
                         data: 'phone',

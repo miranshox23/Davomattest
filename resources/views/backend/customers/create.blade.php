@@ -66,7 +66,7 @@
                         </div>
 
                         <div class="row mb-2">
-                            <label for="company_vat" class="col-md-3 col-form-label">№</label>
+                            <label for="company_vat" class="col-md-3 col-form-label">Рўзадорлар</label>
 
                             <div class="col-md-8">
                                 <input id="company_vat" name="company_vat" type="text"
@@ -82,10 +82,10 @@
 
                         <div class="row mb-2">
                             <label for="address_street" class="col-md-3 col-form-label">
-                                Рўзадорлар
+                                Чой
                             </label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <input id="address_street" name="address_street" type="text"
                                     class="form-control @error('address_street') is-invalid @enderror"
                                     value="{{ old('address_street') }}">
@@ -95,7 +95,7 @@
                                 @enderror
                             </div>
 
-                            <div class="col-md-2">
+                            {{-- <div class="col-md-2">
                                 <input id="address_number" name="address_number" type="text"
                                     class="form-control @error('address_number') is-invalid @enderror"
                                     value="{{ old('address_number') }}">
@@ -103,27 +103,25 @@
                                 @error('address_number')
                                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                 @enderror
-                            </div>
+                            </div> --}}
                         </div>
 
                         <div class="row mb-2">
                             <label for="address_country" class="col-md-3 col-form-label">
-                                Country, postal code, place :
+                                ходимлар сони 2-смена
                             </label>
 
-                            <div class="col-md-2">
-                                <select name="address_country" id="address_country" class="form-select">
-                                    <option value="">Choose ...</option>
-                                    @foreach ($countries as $country)
-                                        <option value="{{ $country->iso2 }}">{{ $country->name }}</option>
-                                    @endforeach
-                                </select>
+                            <div class="col-md-8">
+                                <input id="address_country" name="address_country" type="text"
+                                    class="form-control @error('address_country') is-invalid @enderror"
+                                    value="{{ old('address_country') }}">
+
                                 @error('address_country')
                                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                 @enderror
                             </div>
 
-                            <div class="col-md-2">
+                            {{-- <div class="col-md-2">
                                 <input id="address_postal_code" name="address_postal_code" type="text"
                                     class="form-control @error('address_postal_code') is-invalid @enderror"
                                     value="{{ old('address_postal_code') }}">
@@ -141,27 +139,71 @@
                                 @error('address_place')
                                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                 @enderror
-                            </div>
+                            </div> --}}
 
-                            <div class="col-md-1">
+                            {{-- <div class="col-md-1">
                                 <button type="button" class="btn btn-outline-secondary btn-sm" id="btnMapFacturation"
                                     name="btnMapFacturation" title="Show address on map" tabindex="-1">
                                     <img src="{{ asset('img/icons/google-maps-location.png') }}"
                                         class="img-fluid mx-auto d-block" />
                                 </button>
+                            </div> --}}
+                        </div>
+                        <hr class="narrow" />
+                        <div class="row mb-2">
+                            <label for="address_postal_code" class="col-md-3 col-form-label">
+                                05:30 дан кейинги ходимлар сони 2-смена
+                            </label>
+
+                            <div class="col-md-8">
+                                <input id="address_postal_code" name="address_postal_code" type="text"
+                                    class="form-control @error('address_postal_code') is-invalid @enderror"
+                                    value="{{ old('address_postal_code') }}">
+
+                                @error('address_postal_code')
+                                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                                @enderror
                             </div>
+
+                            {{-- <div class="col-md-2">
+                                <input id="address_postal_code" name="address_postal_code" type="text"
+                                    class="form-control @error('address_postal_code') is-invalid @enderror"
+                                    value="{{ old('address_postal_code') }}">
+
+                                @error('address_postal_code')
+                                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                                @enderror
+                            </div>
+
+                            <div class="col-md-4">
+                                <input id="address_place" name="address_place" type="text"
+                                    class="form-control @error('address_place') is-invalid @enderror"
+                                    value="{{ old('address_place') }}">
+
+                                @error('address_place')
+                                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                                @enderror
+                            </div> --}}
+
+                            {{-- <div class="col-md-1">
+                                <button type="button" class="btn btn-outline-secondary btn-sm" id="btnMapFacturation"
+                                    name="btnMapFacturation" title="Show address on map" tabindex="-1">
+                                    <img src="{{ asset('img/icons/google-maps-location.png') }}"
+                                        class="img-fluid mx-auto d-block" />
+                                </button>
+                            </div> --}}
                         </div>
                         <hr class="narrow" />
 
                         <div class="row mb-2">
-                            <label for="phone" class="col-md-3 col-form-label">Phone :</label>
+                            <label for="phone" class="col-md-3 col-form-label">Рўзадорлар 2-смена</label>
 
                             <div class="col-md-8">
                                 <div class="input-group">
                                     <input id="phone" name="phone" type="text"
                                         class="form-control @error('phone') is-invalid @enderror"
                                         value="{{ old('phone') }}">
-                                    <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+
                                 </div>
 
                                 @error('phone')
@@ -171,14 +213,14 @@
                         </div>
 
                         <div class="row">
-                            <label for="email" class="col-md-3 col-form-label">E-mail :</label>
+                            <label for="email" class="col-md-3 col-form-label">Чой 2-смена</label>
 
                             <div class="col-md-8">
                                 <div class="input-group">
                                     <input id="email" name="email" type="email"
                                         class="form-control @error('email') is-invalid @enderror"
                                         value="{{ old('email') }}">
-                                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+
                                 </div>
 
                                 @error('email')
@@ -198,13 +240,13 @@
                             </div>
 
                             <div class="col text-end">
-                                <button type="submit" class="btn btn-primary text-white btn-sm" tabindex="-1">send</button>
+                                <button type="submit" class="btn btn-primary text-white btn-sm" tabindex="-1">Saqlash</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card mb-3">
+                {{-- <div class="card mb-3">
                     <div class="card-header">
                         <div class="row">
                             <div class="col">Delivery address</div>
@@ -305,10 +347,10 @@
                     <div class="card-footer">
                         <small>Delivery address should only be used if different from facturation address above.</small>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
-            <div class="col-5">
+            {{-- <div class="col-5">
                 <div class="card mb-3">
                     <div class="card-header bg-info text-white">
                         <div class="row">
@@ -325,7 +367,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </form>
 @endsection
