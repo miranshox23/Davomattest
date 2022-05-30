@@ -197,18 +197,21 @@
                         name: 'address_street',
                     },
                     {
+                        data: 'phone',
+                        name: 'phone',
+                    },
+                    {
                         data: 'address_country',
                         name: 'address_country',
                         className: 'text-center',
+
                     },
+
                     {
                         data: 'address_place',
                         name: 'address_place',
                     },
-                    {
-                        data: 'phone',
-                        name: 'phone',
-                    },
+
                     {
                         data: 'phone',
                         name: 'phone',
