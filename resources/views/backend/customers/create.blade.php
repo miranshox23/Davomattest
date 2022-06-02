@@ -213,17 +213,17 @@
                         </div>
 
                         <div class="row">
-                            <label for="email" class="col-md-3 col-form-label">Чой 2-смена</label>
+                            <label for="delivery_address_street" class="col-md-3 col-form-label">Чой 2-смена</label>
 
                             <div class="col-md-8">
                                 <div class="input-group">
-                                    <input id="email" name="email" type="email"
-                                        class="form-control @error('email') is-invalid @enderror"
-                                        value="{{ old('email') }}">
+                                    <input id="delivery_address_street" name="delivery_address_street" type="text"
+                                        class="form-control @error('delivery_address_street') is-invalid @enderror"
+                                        value="{{ old('delivery_address_street') }}">
 
                                 </div>
 
-                                @error('email')
+                                @error('delivery_address_street')
                                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                 @enderror
                             </div>

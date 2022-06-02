@@ -193,13 +193,14 @@
                         name: 'company_name',
                     },
                     {
+                        data: 'company_vat',
+                        name: 'company_vat',
+                    },
+                    {
                         data: 'address_street',
                         name: 'address_street',
                     },
-                    {
-                        data: 'phone',
-                        name: 'phone',
-                    },
+
                     {
                         data: 'address_country',
                         name: 'address_country',
@@ -208,8 +209,8 @@
                     },
 
                     {
-                        data: 'address_place',
-                        name: 'address_place',
+                        data: 'address_postal_code',
+                        name: 'address_postal_code',
                     },
 
                     {
@@ -217,18 +218,22 @@
                         name: 'phone',
                     },
                     {
-                        data: 'send_newsletter',
-                        name: 'send_newsletter',
-                        searchable: false,
-                        className: "text-center no-select toggleSendNewsletter",
-                        render: function(data, type, row, meta) {
-                            if (data == 1) {
-                                return '<i class="bi bi-check-lg"></i>';
-                            } else {
-                                return '&nbsp;';
-                            }
-                        },
-                    }
+                        data: 'delivery_address_street',
+                        name: 'delivery_address_street',
+                    },
+                    // {
+                    //     data: 'send_newsletter',
+                    //     name: 'send_newsletter',
+                    //     searchable: false,
+                    //     className: "text-center no-select toggleSendNewsletter",
+                    //     render: function(data, type, row, meta) {
+                    //         if (data == 1) {
+                    //             return '<i class="bi bi-check-lg"></i>';
+                    //         } else {
+                    //             return '&nbsp;';
+                    //         }
+                    //     },
+                    // }
                 ],
                 select: {
                     selector: 'td:not(.no-select)',

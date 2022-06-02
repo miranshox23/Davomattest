@@ -13,7 +13,7 @@
                         <div class="col">Davomaat</div>
 
                         <div class="col text-center">
-                            <strong>{{ str_pad($customer->id, 5, '0', STR_PAD_LEFT) }}</strong>
+                            <strong> ID {{ str_pad($customer->id, 5, '0', STR_PAD_LEFT) }}</strong>
                         </div>
 
                         <div class="col fs-5 text-end">
@@ -24,7 +24,7 @@
 
                 <div class="card-body">
                     <div class="row mb-2">
-                        <label for="customer_last_name" class="col-md-3 col-form-label">Last name :</label>
+                        <label for="customer_last_name" class="col-md-3 col-form-label">Бошқармалар номи</label>
 
                         <div class="col-md-8">
                             <input id="customer_last_name" name="customer_last_name" type="text" readonly
@@ -33,7 +33,7 @@
                     </div>
 
                     <div class="row mb-2">
-                        <label for="customer_first_name" class="col-md-3 col-form-label">First name :</label>
+                        <label for="customer_first_name" class="col-md-3 col-form-label">ходимлар сони</label>
 
                         <div class="col-md-8">
                             <input id="customer_first_name" name="customer_first_name" type="text" readonly
@@ -43,19 +43,21 @@
                     <hr class="narrow" />
 
                     <div class="row mb-2">
-                        <label for="company_name" class="col-md-3 col-form-label">Company :</label>
+                        <label for="company_name" class="col-md-3 col-form-label">17:30 дан кейинги ходимлар сони</label>
 
                         <div class="col-md-8">
-                            <input id="company_name" name="company_name" type="text" readonly class="form-control-plaintext"
+                            <input id="company_name" name="company_name" type="text" readonly
+                                class="form-control-plaintext"
                                 value="{{ $customer->company_name }}">
                         </div>
                     </div>
 
                     <div class="row mb-2">
-                        <label for="company_vat" class="col-md-3 col-form-label">VAT N° :</label>
+                        <label for="company_vat" class="col-md-3 col-form-label">Рўзадорлар</label>
 
                         <div class="col-md-8">
-                            <input id="company_vat" name="company_vat" type="text" readonly class="form-control-plaintext"
+                            <input id="company_vat" name="company_vat" type="text" readonly
+                             class="form-control-plaintext"
                                 value="{{ $customer->company_vat }}">
                         </div>
                     </div>
@@ -63,45 +65,30 @@
 
                     <div class="row mb-2">
                         <label for="address_street" class="col-md-3 col-form-label">
-                            Street, number :
+                            Чой
                         </label>
 
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <input id="address_street" name="address_street" type="text" readonly
                                 class="form-control-plaintext" value="{{ $customer->address_street }}">
                         </div>
 
-                        <div class="col-md-2">
+                        {{-- <div class="col-md-2">
                             <input id="address_number" name="address_number" type="text" readonly
                                 class="form-control-plaintext" value="{{ $customer->address_number }}">
-                        </div>
+                        </div> --}}
                     </div>
 
                     <div class="row mb-2">
                         <label for="address_country" class="col-md-3 col-form-label">
-                            Country, postal code, place :
+                            ходимлар сони 2-смена
                         </label>
 
                         <div class="col-md-2">
-                            <select name="address_country" id="address_country" class="form-select selectpicker" disabled>
-                                <option value="">Choose ...</option>
-                                @foreach ($countries as $country)
-                                    @if ($country->iso2 == $customer->address_country)
-                                        <option value="{{ $country->iso2 }}" selected>{{ $country->name }}
-                                        </option>
-                                    @else
-                                        <option value="{{ $country->iso2 }}">{{ $country->name }}</option>
-                                    @endif
-                                @endforeach
-                            </select>
+                            <input id="address_country" name="address_country" type="text" readonly
+                                class="form-control-plaintext" value="{{ $customer->address_country }}">
                         </div>
-
-                        <div class="col-md-2">
-                            <input id="address_postal_code" name="address_postal_code" type="text" readonly
-                                class="form-control-plaintext" value="{{ $customer->address_postal_code }}">
-                        </div>
-
-                        <div class="col-md-4">
+                        {{-- <div class="col-md-4">
                             <input id="address_place" name="address_place" type="text" readonly
                                 class="form-control-plaintext" value="{{ $customer->address_place }}">
                         </div>
@@ -112,12 +99,22 @@
                                 <img src="{{ asset('img/icons/google-maps-location.png') }}"
                                     class="img-fluid mx-auto d-block" />
                             </button>
+                        </div> --}}
+                    </div>
+                    <div class="row mb-2">
+                        <label for="address_postal_code" class="col-md-3 col-form-label">
+                            05:30 дан кейинги ходимлар сони 2-смена
+                        </label>
+
+                        <div class="col-md-8">
+                            <input id="address_postal_code" name="address_street" type="text" readonly
+                                class="form-control-plaintext" value="{{ $customer->address_postal_code }}">
                         </div>
                     </div>
                     <hr class="narrow" />
 
                     <div class="row mb-2">
-                        <label for="phone" class="col-md-3 col-form-label">Phone :</label>
+                        <label for="phone" class="col-md-3 col-form-label">Рўзадорлар 2-смена</label>
 
                         <div class="col-md-8">
                             <input id="phone" name="phone" type="text" readonly class="form-control-plaintext"
@@ -126,11 +123,11 @@
                     </div>
 
                     <div class="row">
-                        <label for="email" class="col-md-3 col-form-label">E-mail :</label>
+                        <label for="delivery_address_street" class="col-md-3 col-form-label">Чой 2-смена</label>
 
                         <div class="col-md-8">
-                            <input id="email" name="email" type="email" readonly class="form-control-plaintext"
-                                value="{{ $customer->email }}">
+                            <input id="delivery_address_street" name="delivery_address_street" type="text" readonly class="form-control-plaintext"
+                                value="{{ $customer->delivery_address_street }}">
                         </div>
                     </div>
                 </div>
@@ -147,7 +144,7 @@
                 </div>
             </div>
 
-            <div class="card mb-3">
+            {{-- <div class="card mb-3">
                 <div class="card-header">
                     <div class="row">
                         <div class="col">Delivery address</div>
@@ -215,14 +212,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
 
         <div class="col-5">
             <div class="card mb-3">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col">System</div>
+                        <div class="col">Vaqt</div>
 
                         <div class="col fs-5 text-end">
                             <img src="{{ asset('img/icons/system.png') }}" />
@@ -232,7 +229,7 @@
 
                 <div class="card-body">
                     <div class="row mb-2">
-                        <label for="created_at" class="col-md-5 col-form-label">Date created :</label>
+                        <label for="created_at" class="col-md-5 col-form-label">Yaratilgan vaqti :</label>
                         <div class="col-md-6">
                             <input type="text" readonly class="form-control-plaintext" id="created_at"
                                 value="{{ $customer->created_at }}">
@@ -240,7 +237,7 @@
                     </div>
 
                     <div class="row mb-2">
-                        <label for="updated_at" class="col-md-5 col-form-label">Date updated :</label>
+                        <label for="updated_at" class="col-md-5 col-form-label">O'zgartirilgan vaqti :</label>
                         <div class="col-md-6">
                             <input type="text" readonly class="form-control-plaintext" id="updated_at"
                                 value="{{ $customer->updated_at }}">

@@ -14,10 +14,10 @@
                 <div class="card mb-3">
                     <div class="card-header">
                         <div class="row">
-                            <div class="col">Customert - Edit</div>
+                            <div class="col">Davomat</div>
 
                             <div class="col text-center">
-                                <strong>{{ str_pad($customer->id, 5, '0', STR_PAD_LEFT) }}</strong>
+                                <strong>ID {{ str_pad($customer->id, 5, '0', STR_PAD_LEFT) }}</strong>
                             </div>
 
                             <div class="col fs-5 text-end">
@@ -28,10 +28,10 @@
 
                     <div class="card-body">
                         <div class="row mb-2">
-                            <label for="customer_last_name" class="col-md-3 col-form-label">Last name :</label>
+                            <label for="customer_last_name" class="col-md-3 col-form-label">Бошқармалар номи</label>
 
                             <div class="col-md-8">
-                                <input id="customer_last_name" name="customer_last_name" type="text"
+                                <input id="customer_last_name" name="customer_last_name" type="text" readonly
                                     class="form-control @error('customer_last_name') is-invalid @enderror"
                                     value="{{ $customer->customer_last_name }}" autofocus>
 
@@ -42,10 +42,10 @@
                         </div>
 
                         <div class="row mb-2">
-                            <label for="customer_first_name" class="col-md-3 col-form-label">First name :</label>
+                            <label for="customer_first_name" class="col-md-3 col-form-label">ходимлар сони</label>
 
                             <div class="col-md-8">
-                                <input id="customer_first_name" name="customer_first_name" type="text"
+                                <input id="customer_first_name" name="customer_first_name" type="text" readonly
                                     class="form-control @error('customer_first_name') is-invalid @enderror"
                                     value="{{ $customer->customer_first_name }}">
 
@@ -57,7 +57,7 @@
                         <hr class="narrow" />
 
                         <div class="row mb-2">
-                            <label for="company_name" class="col-md-3 col-form-label">Company :</label>
+                            <label for="company_name" class="col-md-3 col-form-label">17:30 дан кейинги ходимлар сони</label>
 
                             <div class="col-md-8">
                                 <input id="company_name" name="company_name" type="text"
@@ -71,7 +71,7 @@
                         </div>
 
                         <div class="row mb-2">
-                            <label for="company_vat" class="col-md-3 col-form-label">VAT N° :</label>
+                            <label for="company_vat" class="col-md-3 col-form-label">Рўзадорлар</label>
 
                             <div class="col-md-8">
                                 <input id="company_vat" name="company_vat" type="text"
@@ -87,10 +87,10 @@
 
                         <div class="row mb-2">
                             <label for="address_street" class="col-md-3 col-form-label">
-                                Street, number :
+                                Чой
                             </label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <input id="address_street" name="address_street" type="text"
                                     class="form-control @error('address_street') is-invalid @enderror"
                                     value="{{ $customer->address_street }}">
@@ -100,7 +100,7 @@
                                 @enderror
                             </div>
 
-                            <div class="col-md-2">
+                            {{-- <div class="col-md-2">
                                 <input id="address_number" name="address_number" type="text"
                                     class="form-control @error('address_number') is-invalid @enderror"
                                     value="{{ $customer->address_number }}">
@@ -108,32 +108,24 @@
                                 @error('address_number')
                                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                 @enderror
-                            </div>
+                            </div> --}}
                         </div>
 
                         <div class="row mb-2">
                             <label for="address_country" class="col-md-3 col-form-label">
-                                Country, postal code, place :
+                                ходимлар сони 2-смена
                             </label>
 
-                            <div class="col-md-2">
-                                <select name="address_country" id="address_country" class="form-select">
-                                    <option value="">Choose ...</option>
-                                    @foreach ($countries as $country)
-                                        @if ($country->iso2 == $customer->address_country)
-                                            <option value="{{ $country->iso2 }}" selected>{{ $country->name }}
-                                            </option>
-                                        @else
-                                            <option value="{{ $country->iso2 }}">{{ $country->name }}</option>
-                                        @endif
-                                    @endforeach
-                                </select>
+                            <div class="col-md-8">
+                                <input id="address_country" name="address_country" type="text" readonly
+                                    class="form-control @error('address_country') is-invalid @enderror"
+                                    value="{{ $customer->address_country }}">
                                 @error('address_country')
                                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                 @enderror
                             </div>
 
-                            <div class="col-md-2">
+                            {{-- <div class="col-md-2">
                                 <input id="address_postal_code" name="address_postal_code" type="text"
                                     class="form-control @error('address_postal_code') is-invalid @enderror"
                                     value="{{ $customer->address_postal_code }}">
@@ -151,27 +143,42 @@
                                 @error('address_place')
                                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                 @enderror
-                            </div>
+                            </div> --}}
 
-                            <div class="col-md-1">
+                            {{-- <div class="col-md-1">
                                 <button type="button" class="btn btn-outline-secondary btn-sm" id="btnMapFacturation"
                                     name="btnMapFacturation" title="Show address on map" tabindex="-1">
                                     <img src="{{ asset('img/icons/google-maps-location.png') }}"
                                         class="img-fluid mx-auto d-block" />
                                 </button>
-                            </div>
+                            </div> --}}
                         </div>
                         <hr class="narrow" />
 
                         <div class="row mb-2">
-                            <label for="phone" class="col-md-3 col-form-label">Phone :</label>
+                            <label for="address_postal_code" class="col-md-3 col-form-label">
+                                05:30 дан кейинги ходимлар сони 2-смена
+                            </label>
+
+                            <div class="col-md-8">
+                                <input id="address_postal_code" name="address_postal_code" type="text"
+                                    class="form-control @error('address_postal_code') is-invalid @enderror"
+                                    value="{{ $customer->address_postal_code }}">
+                                @error('address_postal_code')
+                                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                                @enderror
+                            </div>
+
+
+                        </div>
+                        <div class="row mb-2">
+                            <label for="phone" class="col-md-3 col-form-label">Рўзадорлар 2-смена</label>
 
                             <div class="col-md-8">
                                 <div class="input-group">
                                     <input id="phone" name="phone" type="text"
                                         class="form-control @error('phone') is-invalid @enderror"
                                         value="{{ $customer->phone }}">
-                                    <span class="input-group-text"><i class="bi bi-telephone"></i></span>
                                 </div>
 
                                 @error('phone')
@@ -181,16 +188,14 @@
                         </div>
 
                         <div class="row">
-                            <label for="email" class="col-md-3 col-form-label">E-mail :</label>
+                            <label for="delivery_address_street" class="col-md-3 col-form-label">Чой 2-смена</label>
 
                             <div class="col-md-8">
                                 <div class="input-group">
-                                    <input id="email" name="email" type="email"
-                                        class="form-control @error('email') is-invalid @enderror"
-                                        value="{{ $customer->email }}">
-                                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-
-                                    @error('email')
+                                    <input id="delivery_address_street" name="delivery_address_street" type="text"
+                                        class="form-control @error('delivery_address_street') is-invalid @enderror"
+                                        value="{{ $customer->delivery_address_street }}">
+                                    @error('delivery_address_street')
                                         <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                     @enderror
                                 </div>
@@ -208,13 +213,13 @@
                             </div>
 
                             <div class="col text-end">
-                                <button type="submit" class="btn btn-primary text-white btn-sm" tabindex="-1">Send</button>
+                                <button type="submit" class="btn btn-primary text-white btn-sm" tabindex="-1">Saqlash</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card mb-3">
+                {{-- <div class="card mb-3">
                     <div class="card-header">
                         <div class="row">
                             <div class="col">Delivery address</div>
@@ -320,14 +325,14 @@
                     <div class="card-footer">
                         <small>Delivery address should only be used if different from facturation address above.</small>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
             <div class="col-5">
                 <div class="card mb-3">
                     <div class="card-header">
                         <div class="row">
-                            <div class="col">System</div>
+                            <div class="col">Vaqt</div>
 
                             <div class="col fs-5 text-end">
                                 <img src="{{ asset('img/icons/system.png') }}" />
@@ -337,7 +342,7 @@
 
                     <div class="card-body">
                         <div class="row mb-2">
-                            <label for="created_at" class="col-md-5 col-form-label">Date created :</label>
+                            <label for="created_at" class="col-md-5 col-form-label">Yaratilgan vaqti :</label>
                             <div class="col-md-6">
                                 <input type="text" readonly class="form-control-plaintext" id="created_at"
                                     value="{{ $customer->created_at }}">
@@ -345,7 +350,7 @@
                         </div>
 
                         <div class="row mb-2">
-                            <label for="updated_at" class="col-md-5 col-form-label">Date updated :</label>
+                            <label for="updated_at" class="col-md-5 col-form-label">O'zgartirilgan vaqti :</label>
                             <div class="col-md-6">
                                 <input type="text" readonly class="form-control-plaintext" id="updated_at"
                                     value="{{ $customer->updated_at }}">
@@ -354,7 +359,7 @@
                     </div>
                 </div>
 
-                <div class="card mb-3">
+                {{-- <div class="card mb-3">
                     <div class="card-header bg-info text-white">
                         <div class="row">
                             <div class="col">Help</div>
@@ -369,7 +374,7 @@
                             <li>Click the <strong>Send</strong> button to save.</li>
                         </ul>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </form>
