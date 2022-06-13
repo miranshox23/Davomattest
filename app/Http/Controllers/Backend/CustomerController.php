@@ -19,18 +19,15 @@ class CustomerController extends Controller
 
             return Datatables::of($customers)
                 ->addColumn('DT_RowId', function ($row) {return $row->id;})
-                ->editColumn('address_street', function ($row) {return $row->address;})
-                ->editColumn('address_place', function ($row) {return $row->place;})
-                ->filterColumn('customer_last_name', function ($query, $keyword) {
-                    $sql = "CONCAT(customers.customer_last_name, ' ', customers.customer_first_name) like ?";
+
+                ->filterColumn('department_name', function ($query, $keyword) {
+                    $sql = "CONCAT(customers.department_name, ' ', customers.employees) like ?";
                     $query->whereRaw($sql, ["%{$keyword}%"]);
                 })
-                ->filterColumn('address_street', function ($query, $keyword) {
-                    $sql = "CONCAT(customers.address_street, ' ', customers.address_number) like ?";
-                    $query->whereRaw($sql, ["%{$keyword}%"]);
+                ->filterColumn('employees_second', function ($query, $keyword) {
                 })
-                ->filterColumn('address_place', function ($query, $keyword) {
-                    $sql = "CONCAT(customers.address_postal_code, ' ', customers.address_place) like ?";
+                ->filterColumn('employees_second', function ($query, $keyword) {
+                    $sql = "CONCAT(customers.employees_second_after5, ' ', customers.employees_second) like ?";
                     $query->whereRaw($sql, ["%{$keyword}%"]);
                 })
                 ->toJson();

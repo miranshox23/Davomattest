@@ -28,57 +28,28 @@
 
                     <div class="card-body">
                         <div class="row mb-2">
-                            <label for="customer_last_name" class="col-md-3 col-form-label">Бошқармалар номи</label>
+                            <label for="department_name" class="col-md-3 col-form-label">Бошқармалар номи</label>
 
                             <div class="col-md-8">
-                                <input id="customer_last_name" name="customer_last_name" type="text" readonly
-                                    class="form-control @error('customer_last_name') is-invalid @enderror"
-                                    value="{{ $customer->customer_last_name }}" autofocus>
+                                <input id="department_name" name="department_name" type="text" readonly
+                                    class="form-control @error('department_name') is-invalid @enderror"
+                                    value="{{ $customer->department_name }}" autofocus>
 
-                                @error('customer_last_name')
+                                @error('department_name')
                                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="row mb-2">
-                            <label for="customer_first_name" class="col-md-3 col-form-label">ходимлар сони</label>
+                            <label for="employees" class="col-md-3 col-form-label">ходимлар сони</label>
 
                             <div class="col-md-8">
-                                <input id="customer_first_name" name="customer_first_name" type="text" readonly
-                                    class="form-control @error('customer_first_name') is-invalid @enderror"
-                                    value="{{ $customer->customer_first_name }}">
+                                <input id="employees" name="employees" type="text" readonly
+                                    class="form-control @error('employees') is-invalid @enderror"
+                                    value="{{ $customer->employees }}">
 
-                                @error('customer_first_name')
-                                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
-                                @enderror
-                            </div>
-                        </div>
-                        <hr class="narrow" />
-
-                        <div class="row mb-2">
-                            <label for="company_name" class="col-md-3 col-form-label">17:30 дан кейинги ходимлар сони</label>
-
-                            <div class="col-md-8">
-                                <input id="company_name" name="company_name" type="text"
-                                    class="form-control @error('company_name') is-invalid @enderror"
-                                    value="{{ $customer->company_name }}">
-
-                                @error('company_name')
-                                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-2">
-                            <label for="company_vat" class="col-md-3 col-form-label">Рўзадорлар</label>
-
-                            <div class="col-md-8">
-                                <input id="company_vat" name="company_vat" type="text"
-                                    class="form-control @error('company_vat') is-invalid @enderror"
-                                    value="{{ $customer->company_vat }}">
-
-                                @error('company_vat')
+                                @error('employees')
                                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -86,16 +57,45 @@
                         <hr class="narrow" />
 
                         <div class="row mb-2">
-                            <label for="address_street" class="col-md-3 col-form-label">
+                            <label for="employees_after17" class="col-md-3 col-form-label">17:30 дан кейинги ходимлар сони</label>
+
+                            <div class="col-md-8">
+                                <input id="employees_after17" name="employees_after17" type="text"
+                                    class="form-control @error('employees_after17') is-invalid @enderror"
+                                    value="{{ $customer->employees_after17 }}">
+
+                                @error('employees_after17')
+                                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label for="fasting" class="col-md-3 col-form-label">Рўзадорлар</label>
+
+                            <div class="col-md-8">
+                                <input id="fasting" name="fasting" type="text"
+                                    class="form-control @error('fasting') is-invalid @enderror"
+                                    value="{{ $customer->fasting }}">
+
+                                @error('fasting')
+                                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+                        <hr class="narrow" />
+
+                        <div class="row mb-2">
+                            <label for="tea" class="col-md-3 col-form-label">
                                 Чой
                             </label>
 
                             <div class="col-md-8">
-                                <input id="address_street" name="address_street" type="text"
-                                    class="form-control @error('address_street') is-invalid @enderror"
-                                    value="{{ $customer->address_street }}">
+                                <input id="tea" name="tea" type="text"
+                                    class="form-control @error('tea') is-invalid @enderror"
+                                    value="{{ $customer->tea }}">
 
-                                @error('address_street')
+                                @error('tea')
                                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -112,25 +112,25 @@
                         </div>
 
                         <div class="row mb-2">
-                            <label for="address_country" class="col-md-3 col-form-label">
+                            <label for="employees_second" class="col-md-3 col-form-label">
                                 ходимлар сони 2-смена
                             </label>
 
                             <div class="col-md-8">
-                                <input id="address_country" name="address_country" type="text" readonly
-                                    class="form-control @error('address_country') is-invalid @enderror"
-                                    value="{{ $customer->address_country }}">
-                                @error('address_country')
+                                <input id="employees_second" name="employees_second" type="text" readonly
+                                    class="form-control @error('employees_second') is-invalid @enderror"
+                                    value="{{ $customer->employees_second }}">
+                                @error('employees_second')
                                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                 @enderror
                             </div>
 
                             {{-- <div class="col-md-2">
-                                <input id="address_postal_code" name="address_postal_code" type="text"
-                                    class="form-control @error('address_postal_code') is-invalid @enderror"
-                                    value="{{ $customer->address_postal_code }}">
+                                <input id="employees_second_after5" name="employees_second_after5" type="text"
+                                    class="form-control @error('employees_second_after5') is-invalid @enderror"
+                                    value="{{ $customer->employees_second_after5 }}">
 
-                                @error('address_postal_code')
+                                @error('employees_second_after5')
                                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -156,15 +156,15 @@
                         <hr class="narrow" />
 
                         <div class="row mb-2">
-                            <label for="address_postal_code" class="col-md-3 col-form-label">
+                            <label for="employees_second_after5" class="col-md-3 col-form-label">
                                 05:30 дан кейинги ходимлар сони 2-смена
                             </label>
 
                             <div class="col-md-8">
-                                <input id="address_postal_code" name="address_postal_code" type="text"
-                                    class="form-control @error('address_postal_code') is-invalid @enderror"
-                                    value="{{ $customer->address_postal_code }}">
-                                @error('address_postal_code')
+                                <input id="employees_second_after5" name="employees_second_after5" type="text"
+                                    class="form-control @error('employees_second_after5') is-invalid @enderror"
+                                    value="{{ $customer->employees_second_after5 }}">
+                                @error('employees_second_after5')
                                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -172,30 +172,30 @@
 
                         </div>
                         <div class="row mb-2">
-                            <label for="phone" class="col-md-3 col-form-label">Рўзадорлар 2-смена</label>
+                            <label for="fasting_second" class="col-md-3 col-form-label">Рўзадорлар 2-смена</label>
 
                             <div class="col-md-8">
                                 <div class="input-group">
-                                    <input id="phone" name="phone" type="text"
-                                        class="form-control @error('phone') is-invalid @enderror"
-                                        value="{{ $customer->phone }}">
+                                    <input id="fasting_second" name="fasting_second" type="text"
+                                        class="form-control @error('fasting_second') is-invalid @enderror"
+                                        value="{{ $customer->fasting_second }}">
                                 </div>
 
-                                @error('phone')
+                                @error('fasting_second')
                                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="row">
-                            <label for="delivery_address_street" class="col-md-3 col-form-label">Чой 2-смена</label>
+                            <label for="tea_second" class="col-md-3 col-form-label">Чой 2-смена</label>
 
                             <div class="col-md-8">
                                 <div class="input-group">
-                                    <input id="delivery_address_street" name="delivery_address_street" type="text"
-                                        class="form-control @error('delivery_address_street') is-invalid @enderror"
-                                        value="{{ $customer->delivery_address_street }}">
-                                    @error('delivery_address_street')
+                                    <input id="tea_second" name="tea_second" type="text"
+                                        class="form-control @error('tea_second') is-invalid @enderror"
+                                        value="{{ $customer->tea_second }}">
+                                    @error('tea_second')
                                         <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                     @enderror
                                 </div>
@@ -218,114 +218,6 @@
                         </div>
                     </div>
                 </div>
-
-                {{-- <div class="card mb-3">
-                    <div class="card-header">
-                        <div class="row">
-                            <div class="col">Delivery address</div>
-
-                            <div class="col text-center">
-                                <button type="button" class="btn btn-outline-secondary btn-sm me-3" id="btnClear"
-                                    name="btnClear" title="Delete delivery address" tabindex="-1">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-
-                                <button type="button" class="btn btn-outline-secondary btn-sm" id="btnCopy" name="btnCopy"
-                                    title="Copy delivery address" tabindex="-1">
-                                    <i class="bi bi-clipboard-plus"></i>
-                                </button>
-                            </div>
-
-                            <div class="col fs-5 text-end">
-                                <img src="{{ asset('img/icons/delivery.png') }}" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <div class="row mb-2">
-                            <label for="delivery_address_street" class="col-md-3 col-form-label">
-                                Street, number :
-                            </label>
-
-                            <div class="col-md-6">
-                                <input id="delivery_address_street" name="delivery_address_street" type="text"
-                                    class="form-control @error('delivery_address_street') is-invalid @enderror"
-                                    value="{{ $customer->delivery_address_street }}">
-
-                                @error('delivery_address_street')
-                                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
-                                @enderror
-                            </div>
-
-                            <div class="col-md-2">
-                                <input id="delivery_address_number" name="delivery_address_number" type="text"
-                                    class="form-control @error('delivery_address_number') is-invalid @enderror"
-                                    value="{{ $customer->delivery_address_number }}">
-
-                                @error('delivery_address_number')
-                                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-2">
-                            <label for="delivery_address_country" class="col-md-3 col-form-label">
-                                Country, postal code, place :
-                            </label>
-
-                            <div class="col-md-2">
-                                <select name="delivery_address_country" id="delivery_address_country"
-                                    class="form-select">
-                                    <option value="">Choose ...</option>
-                                    @foreach ($countries as $country)
-                                        @if ($country->iso2 == $customer->delivery_address_country)
-                                            <option value="{{ $country->iso2 }}" selected>{{ $country->name }}
-                                            </option>
-                                        @else
-                                            <option value="{{ $country->iso2 }}">{{ $country->name }}</option>
-                                        @endif
-                                    @endforeach
-                                </select>
-                                @error('delivery_address_country')
-                                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
-                                @enderror
-                            </div>
-
-                            <div class="col-md-2">
-                                <input id="delivery_address_postal_code" name="delivery_address_postal_code" type="text"
-                                    class="form-control @error('delivery_address_postal_code') is-invalid @enderror"
-                                    value="{{ $customer->delivery_address_postal_code }}">
-
-                                @error('delivery_address_postal_code')
-                                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
-                                @enderror
-                            </div>
-
-                            <div class="col-md-4">
-                                <input id="delivery_address_place" name="delivery_address_place" type="text"
-                                    class="form-control @error('delivery_address_place') is-invalid @enderror"
-                                    value="{{ $customer->delivery_address_place }}">
-
-                                @error('delivery_address_place')
-                                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
-                                @enderror
-                            </div>
-
-                            <div class="col-md-1">
-                                <button type="button" class="btn btn-outline-secondary btn-sm" id="btnMapDelivery"
-                                    name="btnMapDelivery" title="Show address on map" tabindex="-1">
-                                    <img src="{{ asset('img/icons/google-maps-location.png') }}"
-                                        class="img-fluid mx-auto d-block" />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card-footer">
-                        <small>Delivery address should only be used if different from facturation address above.</small>
-                    </div>
-                </div> --}}
             </div>
 
             <div class="col-5">
@@ -358,23 +250,6 @@
                         </div>
                     </div>
                 </div>
-
-                {{-- <div class="card mb-3">
-                    <div class="card-header bg-info text-white">
-                        <div class="row">
-                            <div class="col">Help</div>
-
-                            <div class="col fs-5 text-end"><i class="bi bi-question"></i></div>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <ul>
-                            <li>Specify the values.</li>
-                            <li>Click the <strong>Send</strong> button to save.</li>
-                        </ul>
-                    </div>
-                </div> --}}
             </div>
         </div>
     </form>
@@ -388,9 +263,9 @@
                 var href = "https://www.google.nl/maps/place/";
 
                 var place = [
-                    ($('#address_street').val() ?? ''),
+                    ($('#tea').val() ?? ''),
                     ($('#address_number').val() ?? '') + ',',
-                    ($('#address_postal_code').val() ?? ''),
+                    ($('#employees_second_after5').val() ?? ''),
                     ($('#address_place').val() ?? '')
                 ].filter(Boolean).join("+");
 
@@ -409,9 +284,9 @@
                 var href = "https://www.google.nl/maps/place/";
 
                 var place = [
-                    ($('#delivery_address_street').val() ?? ''),
+                    ($('#tea_second').val() ?? ''),
                     ($('#delivery_address_number').val() ?? '') + ',',
-                    ($('#delivery_address_postal_code').val() ?? ''),
+                    ($('#delivery_employees_second_after5').val() ?? ''),
                     ($('#delivery_address_place').val() ?? '')
                 ].filter(Boolean).join("+");
 
@@ -427,19 +302,19 @@
             });
             /* -------------------------------------------------------------------------------------------- */
             $('#btnClear').click(function() {
-                $('#delivery_address_street').val('');
+                $('#tea_second').val('');
                 $('#delivery_address_number').val('');
-                $('#delivery_address_country').val('').trigger('change');
-                $('#delivery_address_postal_code').val('');
+                $('#delivery_employees_second').val('').trigger('change');
+                $('#delivery_employees_second_after5').val('');
                 $('#delivery_address_place').val('');
             });
             /* ------------------------------------------- */
             $('#btnCopy').click(function() {
-                $('#delivery_address_street').val($('#address_street').val());
+                $('#tea_second').val($('#tea').val());
                 $('#delivery_address_number').val($('#address_number').val());
-                $('#delivery_address_country').val($('#address_country').find("option:selected").val())
+                $('#delivery_employees_second').val($('#employees_second').find("option:selected").val())
                     .trigger('change');
-                $('#delivery_address_postal_code').val($('#address_postal_code').val());
+                $('#delivery_employees_second_after5').val($('#employees_second_after5').val());
                 $('#delivery_address_place').val($('#address_place').val());
             });
             /* -------------------------------------------------------------------------------------------- */

@@ -24,110 +24,93 @@
 
                 <div class="card-body">
                     <div class="row mb-2">
-                        <label for="customer_last_name" class="col-md-3 col-form-label">Бошқармалар номи</label>
+                        <label for="department_name" class="col-md-3 col-form-label">Бошқармалар номи</label>
 
                         <div class="col-md-8">
-                            <input id="customer_last_name" name="customer_last_name" type="text" readonly
-                                class="form-control-plaintext" value="{{ $customer->customer_last_name }}">
+                            <input id="department_name" name="department_name" type="text" readonly
+                                class="form-control-plaintext" value="{{ $customer->department_name }}">
                         </div>
                     </div>
 
                     <div class="row mb-2">
-                        <label for="customer_first_name" class="col-md-3 col-form-label">ходимлар сони</label>
+                        <label for="employees" class="col-md-3 col-form-label">ходимлар сони</label>
 
                         <div class="col-md-8">
-                            <input id="customer_first_name" name="customer_first_name" type="text" readonly
-                                class="form-control-plaintext" value="{{ $customer->customer_first_name }}">
+                            <input id="employees" name="employees" type="text" readonly
+                                class="form-control-plaintext" value="{{ $customer->employees }}">
                         </div>
                     </div>
                     <hr class="narrow" />
 
                     <div class="row mb-2">
-                        <label for="company_name" class="col-md-3 col-form-label">17:30 дан кейинги ходимлар сони</label>
+                        <label for="employees_after17" class="col-md-3 col-form-label">17:30 дан кейинги ходимлар сони</label>
 
                         <div class="col-md-8">
-                            <input id="company_name" name="company_name" type="text" readonly
+                            <input id="employees_after17" name="employees_after17" type="text" readonly
                                 class="form-control-plaintext"
-                                value="{{ $customer->company_name }}">
+                                value="{{ $customer->employees_after17 }}">
                         </div>
                     </div>
 
                     <div class="row mb-2">
-                        <label for="company_vat" class="col-md-3 col-form-label">Рўзадорлар</label>
+                        <label for="fasting" class="col-md-3 col-form-label">Рўзадорлар</label>
 
                         <div class="col-md-8">
-                            <input id="company_vat" name="company_vat" type="text" readonly
+                            <input id="fasting" name="fasting" type="text" readonly
                              class="form-control-plaintext"
-                                value="{{ $customer->company_vat }}">
+                                value="{{ $customer->fasting }}">
                         </div>
                     </div>
                     <hr class="narrow" />
 
                     <div class="row mb-2">
-                        <label for="address_street" class="col-md-3 col-form-label">
+                        <label for="tea" class="col-md-3 col-form-label">
                             Чой
                         </label>
 
                         <div class="col-md-8">
-                            <input id="address_street" name="address_street" type="text" readonly
-                                class="form-control-plaintext" value="{{ $customer->address_street }}">
+                            <input id="tea" name="tea" type="text" readonly
+                                class="form-control-plaintext" value="{{ $customer->tea }}">
                         </div>
-
-                        {{-- <div class="col-md-2">
-                            <input id="address_number" name="address_number" type="text" readonly
-                                class="form-control-plaintext" value="{{ $customer->address_number }}">
-                        </div> --}}
                     </div>
 
                     <div class="row mb-2">
-                        <label for="address_country" class="col-md-3 col-form-label">
+                        <label for="employees_second" class="col-md-3 col-form-label">
                             ходимлар сони 2-смена
                         </label>
 
                         <div class="col-md-2">
-                            <input id="address_country" name="address_country" type="text" readonly
-                                class="form-control-plaintext" value="{{ $customer->address_country }}">
+                            <input id="employees_second" name="employees_second" type="text" readonly
+                                class="form-control-plaintext" value="{{ $customer->employees_second }}">
                         </div>
-                        {{-- <div class="col-md-4">
-                            <input id="address_place" name="address_place" type="text" readonly
-                                class="form-control-plaintext" value="{{ $customer->address_place }}">
-                        </div>
-
-                        <div class="col-md-1">
-                            <button type="button" class="btn btn-outline-secondary btn-sm" id="btnMapFacturation"
-                                name="btnMapFacturation" title="Show address on map" tabindex="-1">
-                                <img src="{{ asset('img/icons/google-maps-location.png') }}"
-                                    class="img-fluid mx-auto d-block" />
-                            </button>
-                        </div> --}}
                     </div>
                     <div class="row mb-2">
-                        <label for="address_postal_code" class="col-md-3 col-form-label">
+                        <label for="employees_second_after5" class="col-md-3 col-form-label">
                             05:30 дан кейинги ходимлар сони 2-смена
                         </label>
 
                         <div class="col-md-8">
-                            <input id="address_postal_code" name="address_street" type="text" readonly
-                                class="form-control-plaintext" value="{{ $customer->address_postal_code }}">
+                            <input id="employees_second_after5" name="tea" type="text" readonly
+                                class="form-control-plaintext" value="{{ $customer->employees_second_after5 }}">
                         </div>
                     </div>
                     <hr class="narrow" />
 
                     <div class="row mb-2">
-                        <label for="phone" class="col-md-3 col-form-label">Рўзадорлар 2-смена</label>
+                        <label for="fasting_second" class="col-md-3 col-form-label">Рўзадорлар 2-смена</label>
 
                         <div class="col-md-8">
-                            <input id="phone" name="phone" type="text" readonly class="form-control-plaintext"
-                                value="{{ $customer->phone }}">
+                            <input id="fasting_second" name="fasting_second" type="text" readonly class="form-control-plaintext"
+                                value="{{ $customer->fasting_second }}">
                         </div>
                     </div>
 
                     <div class="row">
-                        <label for="delivery_address_street" class="col-md-3 col-form-label">Чой 2-смена</label>
+                        <label for="tea_second" class="col-md-3 col-form-label">Чой 2-смена</label>
 
                         <div class="col-md-8">
-                            <input id="delivery_address_street" name="delivery_address_street" type="text" readonly class="form-control-plaintext"
-                                value="{{ $customer->delivery_address_street }}">
+                            <input id="tea_second" name="tea_second" type="text" readonly class="form-control-plaintext"
+                                value="{{ $customer->tea_second }}">
                         </div>
                     </div>
                 </div>
@@ -143,76 +126,6 @@
                     </div>
                 </div>
             </div>
-
-            {{-- <div class="card mb-3">
-                <div class="card-header">
-                    <div class="row">
-                        <div class="col">Delivery address</div>
-
-                        <div class="col fs-5 text-end">
-                            <img src="{{ asset('img/icons/delivery.png') }}" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-body">
-                    <div class="row mb-2">
-                        <label for="delivery_address_street" class="col-md-3 col-form-label">
-                            Street, number:
-                        </label>
-
-                        <div class="col-md-6">
-                            <input id="delivery_address_street" name="delivery_address_street" type="text" readonly
-                                class="form-control-plaintext" value="{{ $customer->delivery_address_street }}">
-                        </div>
-
-                        <div class="col-md-2">
-                            <input id="delivery_address_number" name="delivery_address_number" type="text" readonly
-                                class="form-control-plaintext" value="{{ $customer->delivery_address_number }}">
-                        </div>
-                    </div>
-
-                    <div class="row mb-2">
-                        <label for="delivery_address_country" class="col-md-3 col-form-label">
-                            Country, postal code, place :
-                        </label>
-
-                        <div class="col-md-2">
-                            <select name="delivery_address_country" id="delivery_address_country"
-                                class="form-select selectpicker" disabled>
-                                <option value="">Choose ...</option>
-                                @foreach ($countries as $country)
-                                    @if ($country->iso2 == $customer->delivery_address_country)
-                                        <option value="{{ $country->iso2 }}" selected>{{ $country->name }}
-                                        </option>
-                                    @else
-                                        <option value="{{ $country->iso2 }}">{{ $country->name }}</option>
-                                    @endif
-                                @endforeach
-                            </select>
-                        </div>
-
-                        <div class="col-md-2">
-                            <input id="delivery_address_postal_code" name="delivery_address_postal_code" type="text"
-                                readonly class="form-control-plaintext"
-                                value="{{ $customer->delivery_address_postal_code }}">
-                        </div>
-
-                        <div class="col-md-4">
-                            <input id="delivery_address_place" name="delivery_address_place" type="text" readonly
-                                class="form-control-plaintext" value="{{ $customer->delivery_address_place }}">
-                        </div>
-
-                        <div class="col-md-1">
-                            <button type="button" class="btn btn-outline-secondary btn-sm" id="btnMapDelivery"
-                                name="btnMapDelivery" title="Show address on map" tabindex="-1">
-                                <img src="{{ asset('img/icons/google-maps-location.png') }}"
-                                    class="img-fluid mx-auto d-block" />
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
         </div>
 
         <div class="col-5">
@@ -257,9 +170,9 @@
                 var href = "https://www.google.nl/maps/place/";
 
                 var place = [
-                    ($('#address_street').val() ?? ''),
+                    ($('#tea').val() ?? ''),
                     ($('#address_number').val() ?? '') + ',',
-                    ($('#address_postal_code').val() ?? ''),
+                    ($('#employees_second_after5').val() ?? ''),
                     ($('#address_place').val() ?? '')
                 ].filter(Boolean).join("+");
 
@@ -278,9 +191,9 @@
                 var href = "https://www.google.nl/maps/place/";
 
                 var place = [
-                    ($('#delivery_address_street').val() ?? ''),
+                    ($('#tea_second').val() ?? ''),
                     ($('#delivery_address_number').val() ?? '') + ',',
-                    ($('#delivery_address_postal_code').val() ?? ''),
+                    ($('#delivery_employees_second_after5').val() ?? ''),
                     ($('#delivery_address_place').val() ?? '')
                 ].filter(Boolean).join("+");
 
