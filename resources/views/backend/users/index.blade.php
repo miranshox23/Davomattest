@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('title')
-    &vert; Users
+    &vert; Foydalanuvchilar
 @endsection
 
 @section('content')
@@ -158,7 +158,7 @@
                 columns: [{
                         data: 'id',
                         name: 'id',
-                        className: 'text-end'
+
                     },
                     {
                         data: 'name',
