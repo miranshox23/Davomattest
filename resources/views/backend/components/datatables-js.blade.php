@@ -50,26 +50,7 @@
         },
         select: true,
         order: [],
-        buttons: [{
-                className: 'btn-info',
-                text: '<i class="bi bi-question"></i>',
-                titleAttr: 'Help',
-                action: function(e, dt, node, config) {
-                    $.ajax({
-                        method: 'GET',
-                        url: "{{ route('backend.general.getDatatablesHelp') }}",
-                        success: function(response) {
-                            bootbox.dialog({
-                                title: "Help",
-                                message: response,
-                                size: 'xl',
-                                onEscape: true,
-                                backdrop: true,
-                            });
-                        }
-                    });
-                }
-            },
+        buttons: [
             {
                 extend: 'colvis',
                 className: 'btn-outline-dark',
@@ -77,7 +58,7 @@
                 titleAttr: 'Column visibility',
                 postfixButtons: [{
                     extend: 'colvisRestore',
-                    text: 'Show all',
+                    text: 'Barchasi',
                     className: 'bg-info',
                 }],
             },

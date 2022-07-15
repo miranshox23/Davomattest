@@ -134,15 +134,15 @@
                     }
 
                     bootbox.confirm({
-                        title: 'Delete item(s) ...',
-                        message: "Are you sure?",
+                        title: "Qatorni o'chirish",
+                        message: "O'chirish?",
                         buttons: {
                             confirm: {
-                                label: 'Yes',
+                                label: 'Ha',
                                 className: 'btn-sm btn-primary'
                             },
                             cancel: {
-                                label: 'No',
+                                label: "Yo'q",
                                 className: 'btn-sm btn-secondary'
                             }
                         },
@@ -161,7 +161,7 @@
                                         showToast({
                                             type: 'success',
                                             title: 'Delete ...',
-                                            message: 'The item is deleted.',
+                                            message: "Qator o'chirildi.",
                                         });
                                     }
                                 });
@@ -293,11 +293,11 @@
                     backdrop: true,
                     buttons: {
                         confirm: {
-                            label: 'Yes',
+                            label: 'Ha',
                             className: 'btn-success'
                         },
                         cancel: {
-                            label: 'No',
+                            label: "Yo'q",
                             className: 'btn-secondary'
                         }
                     },
@@ -360,7 +360,7 @@
                 strHTML += '</tr>';
                 strHTML += '</tbody>';
                 strHTML += '</table>';
-                strHTML += '<div>Are you sure you want to edit the item above?</div>';
+                strHTML += "<div>Elementni o'zgartirishni hohlaysizmi?</div>";
                 return strHTML;
             };
             /* ------------------------------------------- */

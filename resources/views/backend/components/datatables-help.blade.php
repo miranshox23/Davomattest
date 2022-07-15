@@ -1,4 +1,4 @@
-<div class="accordion" id="accordionDatatablesHelp">
+{{-- <div class="accordion" id="accordionDatatablesHelp">
     <div class="accordion-item">
         <h2 class="accordion-header" id="headingDT1">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true"
@@ -262,4 +262,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
