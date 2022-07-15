@@ -25,21 +25,21 @@ class CustomerUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'customer_last_name' => [
+            'department_name' => [
                 'nullable',
-                'required_without_all:customer_first_name,company_name',
+                'required_without_all:employees,employees_after17',
                 'string',
                 'max:50',
             ],
-            'customer_first_name' => [
+            'employees' => [
                 'nullable',
-                'required_without_all:customer_last_name,company_name',
+                'required_without_all:department_name,employees_after17',
                 'string',
                 'max:50',
             ],
-            'company_name' => [
+            'employees_after17' => [
                 'nullable',
-                'required_without_all:customer_last_name,customer_first_name',
+                'required_without_all:department_name,employees',
                 'string',
                 'max:50',
             ],

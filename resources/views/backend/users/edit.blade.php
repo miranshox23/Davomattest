@@ -87,8 +87,8 @@
 
                             <div class="col-md-2">
                                 <select class="form-select" name="is_developer" id="is_developer">
-                                    <option value="0" @if ($user->is_developer == 0) selected @endif>No</option>
-                                    <option value="1" @if ($user->is_developer == 1) selected @endif>Yes</option>
+                                    <option value="0" @if ($user->is_developer == 0) selected @endif>Yo'q</option>
+                                    <option value="1" @if ($user->is_developer == 1) selected @endif>Ha</option>
                                 </select>
                             </div>
                         </div>
@@ -107,26 +107,6 @@
                                 <button type="submit" class="btn btn-primary text-white btn-sm">Jo'natish</button>
                             </div>
                         </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header bg-info text-white">
-                        <div class="row">
-                            <div class="col">Help</div>
-
-                            <div class="col fs-5 text-end"><i class="bi bi-question"></i></div>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <ul>
-                            <li>Specify the values.</li>
-                            <li>Click the <strong>Send</strong> button to save.</li>
-                        </ul>
                     </div>
                 </div>
             </div>

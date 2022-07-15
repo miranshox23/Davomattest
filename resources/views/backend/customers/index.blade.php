@@ -181,59 +181,46 @@
                 },
                 columns: [
                     {
-                        data: 'customer_last_name',
-                        name: 'customer_last_name',
+                        data: 'department_name',
+                        name: 'department_name',
                     },
                     {
-                        data: 'customer_first_name',
-                        name: 'customer_first_name',
+                        data: 'employees',
+                        name: 'employees',
                     },
                     {
-                        data: 'company_name',
-                        name: 'company_name',
+                        data: 'employees_after17',
+                        name: 'employees_after17',
                     },
                     {
-                        data: 'company_vat',
-                        name: 'company_vat',
+                        data: 'fasting',
+                        name: 'fasting',
                     },
                     {
-                        data: 'address_street',
-                        name: 'address_street',
+                        data: 'tea',
+                        name: 'tea',
                     },
 
                     {
-                        data: 'address_country',
-                        name: 'address_country',
+                        data: 'employees_second',
+                        name: 'employees_second',
                         className: 'text-center',
 
                     },
 
                     {
-                        data: 'address_postal_code',
-                        name: 'address_postal_code',
+                        data: 'employees_second_after5',
+                        name: 'employees_second_after5',
                     },
 
                     {
-                        data: 'phone',
-                        name: 'phone',
+                        data: 'fasting_second',
+                        name: 'fasting_second',
                     },
                     {
-                        data: 'delivery_address_street',
-                        name: 'delivery_address_street',
+                        data: 'tea_second',
+                        name: 'tea_second',
                     },
-                    // {
-                    //     data: 'send_newsletter',
-                    //     name: 'send_newsletter',
-                    //     searchable: false,
-                    //     className: "text-center no-select toggleSendNewsletter",
-                    //     render: function(data, type, row, meta) {
-                    //         if (data == 1) {
-                    //             return '<i class="bi bi-check-lg"></i>';
-                    //         } else {
-                    //             return '&nbsp;';
-                    //         }
-                    //     },
-                    // }
                 ],
                 select: {
                     selector: 'td:not(.no-select)',
@@ -341,10 +328,10 @@
                 }
                 strHTML += '</td>';
                 strHTML += '<td>';
-                if (aRow['company_name'] == null) {
+                if (aRow['employees_after17'] == null) {
                     strHTML += '&nbsp;';
                 } else {
-                    strHTML += aRow['company_name'];
+                    strHTML += aRow['employees_after17'];
                 }
                 strHTML += '</td>';
                 strHTML += '<td>';

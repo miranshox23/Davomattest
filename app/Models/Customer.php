@@ -11,28 +11,16 @@ class Customer extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'customer_last_name',
-        'customer_first_name',
-        'company_name',
-        'company_vat',
-
-        'address_street',
-        'address_number',
-        'address_country',
-        'address_postal_code',
-        'address_place',
-
-        'phone',
+        'department_name',
+        'employees',
+        'employees_after17',
+        'fasting',
+        'tea',
+        'employees_second',
+        'employees_second_after5',
+        'fasting_second',
         'email',
-
-        'delivery_address_street',
-        'delivery_address_number',
-        'delivery_address_country',
-        'delivery_address_postal_code',
-        'delivery_address_place',
-
-        'send_newsletter',
-
+        'tea_second',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -69,18 +57,18 @@ class Customer extends Model
     /* -------------------------------------------------------------------------------------------- */
     public function getCustomerAttribute()
     {
-        return implode(' ', array_filter([$this->attributes['customer_last_name'], $this->attributes['customer_first_name']]));
+        return implode(' ', array_filter([$this->attributes['department_name'], $this->attributes['employees']]));
     }
     public function getAddressAttribute()
     {
         return implode(' ', array_filter([
-            $this->attributes['address_street'],
-            $this->attributes['address_number'],
+            $this->attributes['tea'],
+            $this->attributes['tea'],
         ]));
     }
     public function getPlaceAttribute()
     {
-        return implode(' ', array_filter([$this->attributes['address_postal_code'], $this->attributes['address_place']]));
+        return implode(' ', array_filter([$this->attributes['employees_second_after5'], $this->attributes['tea_second']]));
     }
 
     /* -------------------------------------------------------------------------------------------- */
