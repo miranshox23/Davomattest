@@ -16,7 +16,7 @@ class UsersSeeder extends Seeder
     {
         // Create main user
         User::create([
-            'name' => 'Mironshoh',
+            'name' => 'John DOE',
             'email' => 'admin@admin.com',
             'password' => 'password',
             'is_developer' => '1',

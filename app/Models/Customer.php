@@ -37,9 +37,16 @@ class Customer extends Model
     /* -------------------------------------------------------------------------------------------- */
     public function setCustomerLastNameAttribute($value)
     {
-        $this->attributes['department_name'] = $value ? strtoupper($value) : null;
+        $this->attributes['customer_last_name'] = $value ? strtoupper($value) : null;
     }
- 
+    public function setCustomerFirstNameAttribute($value)
+    {
+        $this->attributes['customer_first_name'] = $value ? ucwords($value) : null;
+    }
+    public function setAddressPlaceAttribute($value)
+    {
+        $this->attributes['address_place'] = $value ? strtoupper($value) : null;
+    }
     public function setEmailAttribute($value)
     {
         $this->attributes['email'] = $value ? strtolower($value) : null;
@@ -52,7 +59,17 @@ class Customer extends Model
     {
         return implode(' ', array_filter([$this->attributes['department_name'], $this->attributes['employees']]));
     }
-    
+    public function getAddressAttribute()
+    {
+        return implode(' ', array_filter([
+            $this->attributes['tea'],
+            $this->attributes['tea'],
+        ]));
+    }
+    public function getPlaceAttribute()
+    {
+        return implode(' ', array_filter([$this->attributes['employees_second_after5'], $this->attributes['tea_second']]));
+    }
 
     /* -------------------------------------------------------------------------------------------- */
     // Accessors (GET) Attribute

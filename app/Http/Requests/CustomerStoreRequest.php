@@ -33,14 +33,14 @@ class CustomerStoreRequest extends FormRequest
             'employees' => [
                 'nullable',
                 'required_without_all:department_name,employees_after17',
-                'integer',
-                'max:10',
+                'string',
+                'max:50',
             ],
             'employees_after17' => [
                 'nullable',
                 'required_without_all:department_name,employees',
-                'integer',
-                'max:10',
+                'string',
+                'max:50',
             ],
             'email' => [
                 'nullable',
