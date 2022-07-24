@@ -35,22 +35,22 @@ class Customer extends Model
     /* -------------------------------------------------------------------------------------------- */
     // Mutators (SET) Attribute
     /* -------------------------------------------------------------------------------------------- */
-    public function setCustomerLastNameAttribute($value)
-    {
-        $this->attributes['customer_last_name'] = $value ? strtoupper($value) : null;
-    }
-    public function setCustomerFirstNameAttribute($value)
-    {
-        $this->attributes['customer_first_name'] = $value ? ucwords($value) : null;
-    }
-    public function setAddressPlaceAttribute($value)
-    {
-        $this->attributes['address_place'] = $value ? strtoupper($value) : null;
-    }
-    public function setEmailAttribute($value)
-    {
-        $this->attributes['email'] = $value ? strtolower($value) : null;
-    }
+    // public function setCustomerLastNameAttribute($value)
+    // {
+    //     $this->attributes['customer_last_name'] = $value ? strtoupper($value) : null;
+    // }
+    // public function setCustomerFirstNameAttribute($value)
+    // {
+    //     $this->attributes['customer_first_name'] = $value ? ucwords($value) : null;
+    // }
+    // public function setAddressPlaceAttribute($value)
+    // {
+    //     $this->attributes['address_place'] = $value ? strtoupper($value) : null;
+    // }
+    // public function setEmailAttribute($value)
+    // {
+    //     $this->attributes['email'] = $value ? strtolower($value) : null;
+    // }
 
     /* -------------------------------------------------------------------------------------------- */
     // Accessors (GET) Attribute (APPENDED)
